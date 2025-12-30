@@ -1,0 +1,202 @@
+/* style.css */
+:root {
+    --grass: #2ecc71;
+    --leaf: #27ae60;
+    --dirt: #8e5a3b;
+    --stone: #7f8c8d;
+    --sky: #88c5f7;
+    --night: #0b1220;
+    --text: #f0f0f0;
+    --muted: #cfd8dc;
+    --accent: #f1c40f;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body.bg {
+    margin: 0;
+    font-family: "Vazirmatn", system-ui, sans-serif;
+    color: var(--text);
+    background: linear-gradient(180deg, var(--sky), #b2e1ff 40%, #95d6a5 70%, #6bb56f 100%);
+    image-rendering: pixelated;
+    min-height: 100vh;
+}
+
+body.night {
+    background: radial-gradient(1200px 800px at 20% 10%, #162237 0%, var(--night) 60%);
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background: rgba(12, 18, 24, .65);
+    backdrop-filter: blur(8px);
+    border-bottom: 2px solid rgba(255, 255, 255, .08);
+}
+
+.brand {
+    font-family: "Press Start 2P", "Vazirmatn", monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: var(--accent);
+    text-shadow: 2px 2px #000;
+}
+
+.nav a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 14px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.nav a:hover {
+    color: #fff
+}
+
+.toggle {
+    background: var(--accent);
+    color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #b7950b;
+}
+
+.toggle:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #b7950b
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px
+}
+
+.card {
+    background: linear-gradient(180deg, rgba(20, 26, 32, .85), rgba(20, 26, 32, .7)),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, .04) 0 16px, transparent 16px 32px);
+    border: 3px solid #1f2a33;
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 14px 0 #0e141a, 0 20px 40px rgba(0, 0, 0, .35);
+}
+
+h1,
+h2 {
+    font-family: "Press Start 2P", "Vazirmatn", monospace;
+    margin: 0 0 12px;
+    line-height: 1.4;
+    color: #fff;
+    text-shadow: 3px 3px #000;
+}
+
+h1 {
+    font-size: 22px
+}
+
+h2 {
+    font-size: 16px
+}
+
+p {
+    margin: 0 0 12px;
+    color: var(--muted)
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 18px
+}
+
+@media (max-width:860px) {
+    .grid2 {
+        grid-template-columns: 1fr
+    }
+}
+
+.input {
+    padding: 12px;
+    border: 3px solid #1f2a33;
+    border-radius: 12px;
+    background: #0f172a;
+    color: #fff;
+    width: 100%;
+}
+
+.cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(180deg, #2ecc71, #239b56);
+    color: #062e0e;
+    border: 3px solid #0b3d27;
+    border-radius: 14px;
+    padding: 12px 18px;
+    font-family: "Press Start 2P";
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0 8px 0 #0b3d27, 0 12px 24px rgba(34, 197, 94, .25);
+    transition: transform .08s ease;
+    text-decoration: none;
+}
+
+.cta:active {
+    transform: translateY(2px);
+    box-shadow: 0 5px 0 #0b3d27
+}
+
+.skin {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    border: 3px solid #1f2a33;
+    border-radius: 12px;
+    background: #0f172a;
+}
+
+.stats {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+}
+
+.stats li {
+    padding: 8px;
+    border: 2px solid #2c3e50;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    background: linear-gradient(180deg, rgba(46, 64, 83, .9), rgba(46, 64, 83, .7));
+}
+
+.error {
+    padding: 12px;
+    border: 2px solid #b00020;
+    color: #ffdada;
+    background: #3a0a12;
+    border-radius: 12px;
+    margin: 8px 0;
+}
+
+.footer {
+    text-align: center;
+    color: var(--muted);
+    margin: 28px 0 12px;
+    font-size: 12px;
+}
